@@ -1,0 +1,18 @@
+.allitems{
+    border-color: black;
+    border: 1px solid black;
+    margin:auto;
+    margin-top:10px;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.bigbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.indiitem{
+    padding-top: 5px;
+}
