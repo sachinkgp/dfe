@@ -11,6 +11,7 @@ const LoginPage = () => {
   function gotosignup(){
     navigate('/signup')
   }
+  //toekn : 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
   function Postdata2(){
     fetch("/login",{
         method:"post",
@@ -21,9 +22,7 @@ const LoginPage = () => {
         })
     })
     .then(res=>res.json())
-    // .then(d=>d.savedUser)
     .then(data=>{
-      // M.toast({html:data})
         if(data.savedUser){
           M.toast({html:"user logeed in"})
           localStorage.setItem("id",data.savedUser._id)      
@@ -31,7 +30,6 @@ const LoginPage = () => {
         navigate('/homepage')
         }else{
           M.toast({html:data.message,classes:"red"})
-          // M.toast({html:"Please enter right email and password",classes:"red"})
         }
     })
     
@@ -41,19 +39,26 @@ const LoginPage = () => {
   return (
     <div className="login-container">
         <h2>Login</h2>
-        <input
+        {/* <input className="input-container"
             type="text"
             placeholder="email"
             value={username}
             onChange={(e)=>setUsername(e.target.value)}
-        />
+        /> */}
 
-        <input
-            type="text"
-            placeholder="password"
-            value={password}
-            onChange={(e)=>setPassword(e.target.value)}
-        />
+        <div className="input-container">
+          <label>
+            email:
+            <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+          </label>
+        </div>
+
+        <div className="input-container">
+          <label>
+            Password:
+            <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          </label>
+        </div>
 
         <button onClick={Postdata2}>
         submit

@@ -6,7 +6,8 @@ const Orderpage = ()=>{
     const navigate = useNavigate()
     const [allorder,setOrder] = useState([])
     useEffect(()=>{
-            fetch('/allliveorders',{
+            // fetch('/allliveorders',{
+                fetch('https://dbekgp.onrender.com/allliveorders',{
                 headers:{"Content-Type":"application/json"},
                 method:"get"
             })
@@ -48,6 +49,14 @@ const Orderpage = ()=>{
             { allorder.map(order =>(
                 <div key={order._id} className="allitems">
                     Order ID: {order._id}  
+                    <br />
+                    {/* Ordered By : {order.ordered_by} */}
+                    <br />
+                    {order.order_name[0]}? " ":
+                    <div className="indiitems">
+                        {order.order_name[0]}:
+                        {order.order_quantity[0]}
+                    </div>
                     <br />
                     <div className="indiitems">
                         {order.order_name[0]}:

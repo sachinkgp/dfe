@@ -15,7 +15,6 @@ const Signup = () => {
     navigate('/login')
   }
   function Postdata(){
-    // console.log("here")
     fetch("/signup",{
         method:"post",
         headers:{"Content-Type":"application/json"},
@@ -28,25 +27,20 @@ const Signup = () => {
 
     })
     M.toast({html: "fetched it bro",classes:"#c62828 red darken-3"})
-    alert(`${name} ${email} ${password} ${mobile_number}`)
-
-    // .then(res=>res.json())
-    // .then(data=>{
-    //   console.log(`reached here`)
-        
-    // })
+    // alert(`${name} ${email} ${password} ${mobile_number}`)
+    navigate('/login')
   }
 
   return (
-    <div className="card">
-        <h2>Login</h2>
+    <div className="login-container">
+        <h2>Signup</h2>
 
-        <input
-            type="text"
-            placeholder="name"
-            value={name}
-            onChange={(e)=>setName(e.target.value)}
-        />
+        <div className="input-container">
+          <label>
+            Name:
+            <input type="text" value={name} onChange={e => setName(e.target.value)} />
+          </label>
+        </div>
 
         <div className="input-container">
           <label>
