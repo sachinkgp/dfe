@@ -13,7 +13,8 @@ const LoginPage = () => {
   }
   //toekn : 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
   function Postdata2(){
-    fetch("/login",{
+    // fetch("/login",{
+    fetch("https://dbekgp.onrender.com/login",{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
