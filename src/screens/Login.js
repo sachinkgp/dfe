@@ -13,8 +13,8 @@ const LoginPage = () => {
   }
   //toekn : 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
   function Postdata2(){
-    // fetch("/login",{
-    fetch("https://dbekgp.onrender.com/login",{
+    fetch("/login",{
+    // fetch("https://dbekgp.onrender.com/login",{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
@@ -33,40 +33,32 @@ const LoginPage = () => {
           M.toast({html:data.message,classes:"red"})
         }
     })
-    
-
   } 
 
   return (
     <div className="login-container">
         <h2>Login</h2>
-        {/* <input className="input-container"
-            type="text"
-            placeholder="email"
-            value={username}
-            onChange={(e)=>setUsername(e.target.value)}
-        /> */}
-
+        
         <div className="input-container">
           <label>
-            email:
-            <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+            {/* email: */}
+            <input type="text" placeholder="Email ID" value={username} onChange={e => setUsername(e.target.value)} />
           </label>
         </div>
 
         <div className="input-container">
           <label>
-            Password:
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+            {/* Password: */}
+            <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
           </label>
         </div>
 
-        <button onClick={Postdata2}>
+        <button onClick={Postdata2} className='btn'>
         submit
         </button> 
-        <div onClick={gotosignup}>
+        <button onClick={gotosignup} className='btn'>
           New User? Sign UP
-        </div>
+        </button>
     </div>
   );
 }

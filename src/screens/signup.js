@@ -15,8 +15,8 @@ const Signup = () => {
     navigate('/login')
   }
   function Postdata(){
-    // fetch("/signup",{
-      fetch("https://dbekgp.onrender.com/signup",{
+    fetch("/signup",{
+      // fetch("https://dbekgp.onrender.com/signup",{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
@@ -38,38 +38,38 @@ const Signup = () => {
 
         <div className="input-container">
           <label>
-            Name:
-            <input type="text" value={name} onChange={e => setName(e.target.value)} />
+            {/* Name: */}
+            <input type="text" placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
           </label>
         </div>
 
         <div className="input-container">
           <label>
-            Mobile Number:
-            <input type="text" value={mobile_number} onChange={e => setMobile_number(e.target.value)} />
+            {/* Mo Number: */}
+            <input type="text" placeholder='Mobile Number' value={mobile_number} onChange={e => setMobile_number(e.target.value)} />
           </label>
         </div>
 
         <div className="input-container">
           <label>
-            Email ID:
-            <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+            {/* Email ID: */}
+            <input type="text" value={email} placeholder="Email ID" onChange={e => setEmail(e.target.value)} />
           </label>
         </div>
         
         <div className="input-container">
           <label>
-            Password:
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+            {/* Password: */}
+            <input type="password" value={password} placeholder="Password" onChange={e => setPassword(e.target.value)} />
           </label>
         </div>
 
-        <button width="50%" onClick={Postdata}>
+        <button width="50%" onClick={Postdata} className='btn'>
           Submit
         </button>
-        <div onClick={gotosignin}>
+        <button onClick={gotosignin} className='btn'>
           Already a User? Sign IN
-        </div>
+        </button>
     </div>
   );
 }

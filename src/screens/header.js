@@ -19,10 +19,10 @@ function Header() {
         <header className="header">
             <div className="header-left">
                 <img src="/DarulaLogo.jpeg" alt="Home" className="home-logo" onClick={gotoplaceorder}/>
-                <input type="search" placeholder="Search..." className="search-input" />
+                {/* <input type="search" placeholder="Search..." className="search-input" /> */}
             </div>
-            <button onClick={gotoplaceorder}>placeorder</button>
-            <button onClick={gotoorderspage}>orders</button>
+            <div onClick={gotoplaceorder}>placeorder</div>
+            <div onClick={gotoorderspage}>orders</div>
             <img src="/42.jpg" alt="Profile" className="profile-photo" onClick={gotomyprofile}/>
         </header>
     );

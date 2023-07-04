@@ -6,8 +6,8 @@ const Orderpage = ()=>{
     const navigate = useNavigate()
     const [allorder,setOrder] = useState([])
     useEffect(()=>{
-            // fetch('/allliveorders',{
-                fetch('https://dbekgp.onrender.com/allliveorders',{
+            fetch('/allliveorders',{
+                // fetch('https://dbekgp.onrender.com/allliveorders',{
                 headers:{"Content-Type":"application/json"},
                 method:"get"
             })

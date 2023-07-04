@@ -1,3 +1,7 @@
+.cartpage{
+    display: none;
+}
+
 .homepage {
     display:flex;
     margin: auto;
@@ -25,6 +29,19 @@
     text-align: center;
 }
 
+.hidebottle{
+    display: none;
+}
+
+.floatbtn{
+    width: 50px;
+    background-color:  rgb(8, 151, 8);;
+    height: 50px;
+    border-radius: 30px;
+    height: 30px;
+    position:'relative'; 
+
+}
 
 /*
 .card {

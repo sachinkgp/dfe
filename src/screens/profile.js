@@ -8,8 +8,8 @@ const Profilepage = ()=>{
     const [userfullfilleddorder,setUserfullfilleddorder]=useState([])
 
     useEffect(()=>{
-        // fetch('/userliveorder',{
-        fetch('https://dbekgp.onrender.com/userliveorder',{
+        fetch('/userliveorder',{
+        // fetch('https://dbekgp.onrender.com/userliveorder',{
             method:"post",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({
@@ -21,8 +21,8 @@ const Profilepage = ()=>{
     },[])
 
     useEffect(()=>{
-        // fetch('/userdeadorder',{
-            fetch('https://dbekgp.onrender.com/userdeadorder',{
+        fetch('/userdeadorder',{
+            // fetch('https://dbekgp.onrender.com/userdeadorder',{
             method:"post",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({
@@ -34,8 +34,8 @@ const Profilepage = ()=>{
     },[])
 
     useEffect(()=>{
-        // fetch('/userfullfilleddorder',{
-            fetch('https://dbekgp.onrender.com/userfullfilleddorder',{
+        fetch('/userfullfilleddorder',{
+            // fetch('https://dbekgp.onrender.com/userfullfilleddorder',{
             method:"post",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({
@@ -65,11 +65,11 @@ const Profilepage = ()=>{
         
         <div className="bigbox">
             <div>
-                <button onClick={logout}>LogOut</button>
+                <button onClick={logout} className='btn' style={{position:'absolute',right:0,margin:10,padding:'10px'}}>LogOut</button>
     
             </div>
-            <p style={{textAlign:"center"}}> all my orders which are still active </p>
-    
+    <p style={{textAlign:"center",margin:'70px'}}> all my orders which are still active </p>
+
             { 
                 allmyorder.map(order =>(
                 <div key={order._id} className="allitems">

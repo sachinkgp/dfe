@@ -2,6 +2,13 @@ import './screens.css'
 import './carddesign.css'
 import { useNavigate } from 'react-router-dom';
 import { useState} from 'react';
+import M from 'materialize-css';
+
+// import Window from "floating-window-ui";
+// import {useFloating} from '@floating-ui/react';
+// import Fab from '@mui/material/Fab';
+// import AddIcon from '@mui/icons-material/Add';
+// import {FloatButton} from 'antd'
 
 const product = [
     {sr:1,name:"Ballentine",image:"./BALLANTINE.jpeg",price:1000},
@@ -13,13 +20,27 @@ const product = [
 ]
 
 function Homepage() {
+    
+    // const {refs, floatingStyles} = useFloating();
+
     const navigate = useNavigate();
+    const [cart,setCart] = useState(true)
+    const [floatbuttoncontent,setFloatbuttoncontent] = useState("Goto CART")
     const [b,setB] = useState(0)
     const [CR,setCR] = useState(0)
     const [T,setT] = useState(0)
     const [BL,setBL] = useState(0)
     const [RL,setRL] = useState(0)
     const [OM,setOM] = useState(0)
+
+    function gotocart(){
+        if(cart==true){
+            setCart(false)
+        }else{
+            setCart(true)
+            setFloatbuttoncontent("Goto Order Page")
+        }
+    }
 
     function placeorder(){
 
@@ -36,15 +57,18 @@ function Homepage() {
         })
         navigate('/profile')
     }
+    function orderadded(){
+        M.toast({html:"added"})
+    }
 
     return (
-        <div className="homepage">
-
+        <div className='homepage'>
+<div className={cart?'':'cartpage'}>
             <div className='card'>
                 <img src={product[0].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[0].name}</h5>
                 <div class="card-body">
-                        <button className='btn' onClick={()=>{setB(b+1)}}
+                        <button className='btn' onClick={()=>{setB(b+1) ;orderadded()}}
                             >Add to cart
                         </button>
                 </div>
@@ -55,57 +79,66 @@ function Homepage() {
                 <h5 className='card-title'>{product[1].name}</h5>
                 <div class="card-body">
 
-                        <button className='btn' onClick={()=>{setCR(CR+1)}}
+                        <button className='btn' onClick={()=>{setCR(CR+1);orderadded()}}
                             >Add to cart
                         </button>
                 </div>
             </div>
+
             <div className='card'>
                 <img src={product[2].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[2].name}</h5>
                 <div className='card-body'>
-                    <button className='btn' onClick={()=>{setT(T+1)}}
+                    <button className='btn' onClick={()=>{setT(T+1);orderadded()}}
                         >Add to cart
                     </button>
                 </div>
             </div>
+
             <div className='card'>
                 <img src={product[3].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[3].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setBL(BL+1)}}
+                    <button className='btn' onClick={()=>{setBL(BL+1);orderadded()}}
                         >Add to cart
                     </button>
                 </div>
             </div>
+
             <div className='card'>
                 <img src={product[4].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[4].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setRL(RL+1)}}
+                    <button className='btn' onClick={()=>{setRL(RL+1);orderadded()}}
                         >Add to cart
                     </button>
                 </div>
             </div>
+
             <div className='card'>
                 <img src={product[5].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[5].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setOM(OM+1)}}
+                    <button className='btn' onClick={()=>{setOM(OM+1);orderadded()}}
                         >Add to cart
                     </button>
                 </div>
             </div>
-               
-            <div className="cartoftheweek">
-                <p>{b} ballentine</p>
-                <p>{CR} Chivas regal</p>
-                <p>{T} Teachers</p>
-                <p>{BL} Black lable</p>
-                <p>{RL} Red Lable</p>
-                <p>{OM} Old Monk</p>
-                <button onClick={placeorder}>Place order</button>
+</div> 
+            <div className="card">
+                <p className={b>0 ? 'showbottle':'hidebottle'}>{b} ballentine</p>
+                <p className={CR>0 ? 'showbottle':'hidebottle'}>{CR} Chivas regal</p>
+                <p className={T>0 ? 'showbottle':'hidebottle'}>{T} Teachers</p>
+                <p className={BL>0 ? 'showbottle':'hidebottle'}>{BL} Black lable</p>
+                <p className={RL>0 ? 'showbottle':'hidebottle'}>{RL} Red Lable</p>
+                <p className={OM>0 ? 'showbottle':'hidebottle'}>{OM} Old Monk</p>
+                <button onClick={placeorder} className='btn'>Place order</button>
             </div>
+            
+            <button style={{position:"fixed",right:0,bottom:30}} className='btn' onClick={gotocart}>
+                {floatbuttoncontent}
+            </button>
+
 
         </div>
 
