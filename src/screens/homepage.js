@@ -25,7 +25,7 @@ function Homepage() {
 
     const navigate = useNavigate();
     const [cart,setCart] = useState(true)
-    const [floatbuttoncontent,setFloatbuttoncontent] = useState("Goto CART")
+    // const [floatbuttoncontent,setFloatbuttoncontent] = useState("./CART.jpeg")
     const [b,setB] = useState(0)
     const [CR,setCR] = useState(0)
     const [T,setT] = useState(0)
@@ -35,10 +35,11 @@ function Homepage() {
 
     function gotocart(){
         if(cart==true){
+            // setFloatbuttoncontent("backbutton")
             setCart(false)
         }else{
             setCart(true)
-            setFloatbuttoncontent("Goto Order Page")
+            // setFloatbuttoncontent("./CART")
         }
     }
 
@@ -134,9 +135,10 @@ function Homepage() {
                 <p className={OM>0 ? 'showbottle':'hidebottle'}>{OM} Old Monk</p>
                 <button onClick={placeorder} className='btn'>Place order</button>
             </div>
-            
-            <button style={{position:"fixed",right:0,bottom:30}} className='btn' onClick={gotocart}>
-                {floatbuttoncontent}
+            {/* //className='btn' */}
+            <button style={{position:"fixed",right:20,bottom:30}}  onClick={gotocart}>
+                <img src={cart?"./CART.jpeg":"./backbutton.jpeg"} alt="CART" style={{width:"40px",height:"40px",position:"fixed",right:20,bottom:30}}/>
+                {/* {floatbuttoncontent} */}
             </button>
 
 

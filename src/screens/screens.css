@@ -33,6 +33,12 @@
     display: none;
 }
 
+.showbottle{
+    font-family: mulish;
+    margin:10px;
+    font-size: larger;
+}
+
 .floatbtn{
     width: 50px;
     background-color:  rgb(8, 151, 8);;

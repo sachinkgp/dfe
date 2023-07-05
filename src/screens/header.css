@@ -4,7 +4,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: rgb(8, 151, 8);
+    /* background-color: rgb(8, 151, 8); */
+    background-color: black;
+}
+
+.text{
+    color:white;
+    font-family: Mulish;
+    /* font-weight: 4000; */
+    font-size:large;
 }
 
 .header-left {
@@ -13,7 +21,7 @@
 }
 
 .home-logo {
-    height: 2rem;
+    height: 5rem;
     margin-right: 1rem;
 }
 

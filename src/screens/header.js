@@ -21,8 +21,8 @@ function Header() {
                 <img src="/DarulaLogo.jpeg" alt="Home" className="home-logo" onClick={gotoplaceorder}/>
                 {/* <input type="search" placeholder="Search..." className="search-input" /> */}
             </div>
-            <div onClick={gotoplaceorder}>placeorder</div>
-            <div onClick={gotoorderspage}>orders</div>
+            <div className="text" onClick={gotoplaceorder}>placeorder</div>
+            <div className="text" onClick={gotoorderspage}>orders</div>
             <img src="/42.jpg" alt="Profile" className="profile-photo" onClick={gotomyprofile}/>
         </header>
     );

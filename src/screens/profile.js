@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './profile.css'
 
 const Profilepage = ()=>{
     const navigate = useNavigate();
@@ -75,25 +76,25 @@ const Profilepage = ()=>{
                 <div key={order._id} className="allitems">
                     Order ID: {order._id}  
                     <br />
-                    <div className="indiitems">
+                    <div className={order.order_quantity[0]?"indiitems":"hideit"}>
                         {order.order_name[0]}:
                         {order.order_quantity[0]}
                     </div>
     
                         <br />
-                    <div className="indiitems">
+                    <div className={order.order_quantity[1]?"indiitems":"hideit"}>
                         {order.order_name[1]}:
                         {order.order_quantity[1]}
                     </div>
                         
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[2]?"indiitems":"hideit"}>
                         {order.order_name[2]}:
                         {order.order_quantity[2]}
                         
                         </div>
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[3]?"indiitems":"hideit"}>
                         {order.order_name[3]}:
                         {order.order_quantity[3]}
                         
@@ -101,19 +102,19 @@ const Profilepage = ()=>{
                         
                         <br />
                         
-                        <div className="indiitems">
+                        <div className={order.order_quantity[4]?"indiitems":"hideit"}>
                         {order.order_name[4]}:
                         {order.order_quantity[4]}
                         </div>
                         
                         <br />
-                        <div>
+                        <div className={order.order_quantity[5]?"indiitems":"hideit"}>
                         {order.order_name[5]}:
                         {order.order_quantity[5]}
                         </div>
     
                         <br />       
-                        <button onClick={()=>{deletethisorder(order._id)}}>
+                        <button className='btn' onClick={()=>{deletethisorder(order._id)}}>
                             Delete Order
                         </button>
                         <div>
@@ -134,25 +135,25 @@ const Profilepage = ()=>{
                     Order ID: {order._id}
                     Order status:{order.order_status}  
                     <br />
-                    <div className="indiitems">
+                    <div className={order.order_quantity[0]?"indiitems":"hideit"}>
                         {order.order_name[0]}:
                         {order.order_quantity[0]}
                     </div>
     
                         <br />
-                    <div className="indiitems">
+                    <div className={order.order_quantity[1]?"indiitems":"hideit"}>
                         {order.order_name[1]}:
                         {order.order_quantity[1]}
                     </div>
                         
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[2]?"indiitems":"hideit"}>
                         {order.order_name[2]}:
                         {order.order_quantity[2]}
                         
                         </div>
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[3]?"indiitems":"hideit"}>
                         {order.order_name[3]}:
                         {order.order_quantity[3]}
                         
@@ -160,19 +161,19 @@ const Profilepage = ()=>{
                         
                         <br />
                         
-                        <div className="indiitems">
+                        <div className={order.order_quantity[4]?"indiitems":"hideit"}>
                         {order.order_name[4]}:
                         {order.order_quantity[4]}
                         </div>
                         
                         <br />
-                        <div>
+                        <div className={order.order_quantity[5]?"indiitems":"hideit"}>
                         {order.order_name[5]}:
                         {order.order_quantity[5]}
                         </div>
     
                         <br />       
-                        <button>
+                        <button className='btn'>
                             This order is picked
                         </button>
                         <div>
@@ -190,25 +191,25 @@ const Profilepage = ()=>{
                     Order ID: {order._id}
                     Order status:{order.order_status}  
                     <br />
-                    <div className="indiitems">
+                    <div className={order.order_quantity[0]?"indiitems":"hideit"}>
                         {order.order_name[0]}:
                         {order.order_quantity[0]}
                     </div>
     
                         <br />
-                    <div className="indiitems">
+                        <div className={order.order_quantity[1]?"indiitems":"hideit"}>
                         {order.order_name[1]}:
                         {order.order_quantity[1]}
                     </div>
                         
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[2]?"indiitems":"hideit"}>
                         {order.order_name[2]}:
                         {order.order_quantity[2]}
                         
                         </div>
                         <br />
-                        <div className="indiitems">
+                        <div className={order.order_quantity[3]?"indiitems":"hideit"}>
                         {order.order_name[3]}:
                         {order.order_quantity[3]}
                         
@@ -216,19 +217,19 @@ const Profilepage = ()=>{
                         
                         <br />
                         
-                        <div className="indiitems">
+                        <div className={order.order_quantity[4]?"indiitems":"hideit"}>
                         {order.order_name[4]}:
                         {order.order_quantity[4]}
                         </div>
                         
                         <br />
-                        <div>
+                        <div className={order.order_quantity[5]?"indiitems":"hideit"}>
                         {order.order_name[5]}:
                         {order.order_quantity[5]}
                         </div>
     
                         <br />       
-                        <button>
+                        <button className='btn'>
                             This order is picked
                         </button>
                         <div>
