@@ -15,8 +15,8 @@ const Signup = () => {
     navigate('/login')
   }
   function Postdata(){
-    fetch("/signup",{
-      // fetch("https://dbekgp.onrender.com/signup",{
+    // fetch("/signup",{
+      fetch("https://dbekgp.onrender.com/signup",{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
