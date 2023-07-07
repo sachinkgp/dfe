@@ -6,12 +6,13 @@
     padding: 1rem;
     /* background-color: rgb(8, 151, 8); */
     background-color: black;
+    max-height: 75px;
 }
 
 .text{
     color:white;
     font-family: Mulish;
-    /* font-weight: 4000; */
+    font-weight: 6000;
     font-size:large;
 }
 
@@ -24,6 +25,10 @@
     height: 5rem;
     margin-right: 1rem;
 }
+.home-logo:hover{
+    color:blue;
+    cursor: grab;
+}
 
 .search-input {
     font-size: 1rem;
@@ -33,4 +38,33 @@
 .profile-photo {
     height: 2rem;
     border-radius: 50%;
+    padding-top: 5px;
+}
+.profile-photo:hover{
+    color:blue;
+    cursor: grab;
+}
+
+.placeorder{
+    padding-top: 3px;
+    padding-right: 40px;
+}
+
+.placeorder:hover {
+    color:blue;
+    cursor: grab;
+}
+.orders{
+    padding-top: 3px;
+    padding-right: 40px;
+}
+.orders:hover{
+    color:blue;
+    cursor: grab;
+}
+
+.headerbox{
+    display: flex;
+    align-self: flex-end;
+    
 }

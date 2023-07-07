@@ -133,6 +133,7 @@ const Profilepage = ()=>{
                 userdeadorder.map(order =>(
                 <div key={order._id} className="allitems">
                     Order ID: {order._id}
+                    <p></p>
                     Order status:{order.order_status}  
                     <br />
                     <div className={order.order_quantity[0]?"indiitems":"hideit"}>
@@ -189,6 +190,7 @@ const Profilepage = ()=>{
                 userfullfilleddorder.map(order =>(
                 <div key={order._id} className="allitems">
                     Order ID: {order._id}
+                    <p></p>
                     Order status:{order.order_status}  
                     <br />
                     <div className={order.order_quantity[0]?"indiitems":"hideit"}>

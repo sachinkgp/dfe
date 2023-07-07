@@ -27,7 +27,7 @@ const Signup = () => {
         })
 
     })
-    M.toast({html: "fetched it bro",classes:"#c62828 red darken-3"})
+    M.toast({html: "Gand marao",classes:"#c62828 red darken-3"})
     // alert(`${name} ${email} ${password} ${mobile_number}`)
     navigate('/login')
   }

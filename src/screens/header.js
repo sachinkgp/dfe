@@ -21,9 +21,12 @@ function Header() {
                 <img src="/DarulaLogo.jpeg" alt="Home" className="home-logo" onClick={gotoplaceorder}/>
                 {/* <input type="search" placeholder="Search..." className="search-input" /> */}
             </div>
-            <div className="text" onClick={gotoplaceorder}>placeorder</div>
-            <div className="text" onClick={gotoorderspage}>orders</div>
-            <img src="/42.jpg" alt="Profile" className="profile-photo" onClick={gotomyprofile}/>
+            <div className='headerbox'>
+                <div className="text placeorder" onClick={gotoplaceorder}>placeorder</div>
+                <div className="text orders" onClick={gotoorderspage}>orders</div>
+                <img src="/42.jpg" alt="Profile" className="profile-photo" onClick={gotomyprofile}/>
+            </div>
+
         </header>
     );
 }
