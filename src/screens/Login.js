@@ -13,8 +13,8 @@ const LoginPage = () => {
   }
   //toekn : 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
   function Postdata2(){
-    fetch("/login",{
-    // fetch("https://dbekgp.onrender.com/login",{
+    // fetch("/login",{
+    fetch("https://dbekgp.onrender.com/login",{
         method:"post",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
@@ -25,7 +25,7 @@ const LoginPage = () => {
     .then(res=>res.json())
     .then(data=>{
         if(data.savedUser){
-          M.toast({html:"user logeed in"})
+          M.toast({html:"logged in successfully"})
           localStorage.setItem("id",data.savedUser._id)      
         localStorage.setItem('name',data.savedUser.name)  
         navigate('/homepage')
