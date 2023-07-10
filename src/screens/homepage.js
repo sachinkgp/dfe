@@ -70,7 +70,7 @@ function Homepage() {
                 <img src={product[0].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[0].name}</h5>
                 <div class="card-body">
-                        <button className='btn' onClick={()=>{setB(b+1) ;orderadded("best daru")}}
+                        <button className='btn' onClick={()=>{setB(b+1) ;orderadded(product[0].name)}}
                             >Add to cart
                         </button>
                 </div>
@@ -81,7 +81,7 @@ function Homepage() {
                 <h5 className='card-title'>{product[1].name}</h5>
                 <div class="card-body">
 
-                        <button className='btn' onClick={()=>{setCR(CR+1);orderadded("Malya ka lund")}}
+                        <button className='btn' onClick={()=>{setCR(CR+1);orderadded(product[1].name)}}
                             >Add to cart
                         </button>
                 </div>
@@ -91,7 +91,7 @@ function Homepage() {
                 <img src={product[2].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[2].name}</h5>
                 <div className='card-body'>
-                    <button className='btn' onClick={()=>{setT(T+1);orderadded("Yahi teacher mila tha")}}
+                    <button className='btn' onClick={()=>{setT(T+1);orderadded(product[2].name)}}
                         >Add to Cart
                     </button>
                 </div>
@@ -101,7 +101,7 @@ function Homepage() {
                 <img src={product[3].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[3].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setBL(BL+1);orderadded("Kallu")}}
+                    <button className='btn' onClick={()=>{setBL(BL+1);orderadded(product[3].name)}}
                         >Add to cart
                     </button>
                 </div>
@@ -111,7 +111,7 @@ function Homepage() {
                 <img src={product[4].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[4].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setRL(RL+1);orderadded("Abe chai mangani hai kya")}}
+                    <button className='btn' onClick={()=>{setRL(RL+1);orderadded(product[4].name)}}
                         >Add to cart
                     </button>
                 </div>
@@ -121,7 +121,7 @@ function Homepage() {
                 <img src={product[5].image} alt="" className="daruimage" />
                 <h5 className='card-title'>{product[5].name}</h5>
                 <div className="card-body">
-                    <button className='btn' onClick={()=>{setOM(OM+1);orderadded("Gareeb Sala")}}
+                    <button className='btn' onClick={()=>{setOM(OM+1);orderadded(product[5].name)}}
                         >Add to cart
                     </button>
                 </div>
