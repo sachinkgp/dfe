@@ -56,7 +56,7 @@ function Homepage() {
                 order_city:"Mumbai"
             })
         })
-        M.toast({html:"Calling Mom..."})
+        M.toast({html:"Order Placed"})
         navigate('/profile')
     }
     function orderadded(msg){
